@@ -13,7 +13,7 @@ struct Color {
     int blue;
 };
 
-void printColors(const Color& hueColor);
+void printColors(const vector<Color>& colors);
 
 int main() {
     srand(time(0));
@@ -31,7 +31,7 @@ int main() {
     // Generate Random
     int n{rand() % (MAX - MIN + 1) + MIN}; // n colors 25-50
 
-    for (int i = 0; i < n; ++i) {
+    for (int i {0}; i < n; ++i) {
         Color temp{};
         temp.red = rand() % (RGB_MAX - RGB_MIN + 1) + RGB_MIN;
         temp.green = rand() % (RGB_MAX - RGB_MIN + 1) + RGB_MIN;
@@ -43,11 +43,17 @@ int main() {
     return 0;
 }
 
-void printColors(const Color& hueColor) {
+void printColors(const vector<Color>& colors) {
     const int COLOR_COL_WIDTH{5};
     const int VALUE_COL_WIDTH{9};
 
     cout << left
          << setw(COLOR_COL_WIDTH) << "Color"
          << setw(VALUE_COL_WIDTH) << "R value";
+
+    for (size_t i{0}; i < colors.size(); ++i) {
+        cout << left
+             << setw(COLOR_COL_WIDTH) << (i + 1)
+             << setw(VALUE_COL_WIDTH) << colors.at(i).red;
+    }
 }
