@@ -12,6 +12,8 @@ struct Color {
     int blue;
 };
 
+void printColors(const Color& hueColor);
+
 int main() {
     srand(time(0));
 
@@ -41,3 +43,5 @@ int main() {
 
     return 0;
 }
+
+void printColors(const Color& hueColor);
