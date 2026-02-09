@@ -17,17 +17,20 @@ int main() {
     const int MIN{25};
     const int MAX{50};
 
-    vector<Color> colorHue{};
-    Color someHue{};
-    someHue.red = 21;
-    someHue.green = 39;
-    someHue.blue = 6;
+    const int RGB_MIN{0};
+    const int RGB_MAX{255};
 
-    // Generate Random 25-50
-    int n {rand() % (MAX - MIN + 1) + MIN};
-    cout << n;
+    vector<Color> colorHue{};
+
+    // Generate Random
+    int n{rand() % (MAX - MIN + 1) + MIN}; // n colors 25-50
+    int rndHue{rand() % (RGB_MAX - RGB_MIN + 1) + RGB_MIN}; // generates 0-255
+
     for (int i = 0; i < n; ++i) {
         Color temp{};
+        temp.red = rndHue;
+        temp.red = rndHue;
+        temp.red = rndHue;
     }
 
     return 0;
