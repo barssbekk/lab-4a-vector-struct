@@ -12,7 +12,16 @@ struct Color {
 int main() {
     vector<Color> colorHue{};
     Color someHue{};
-    cout << someHue.red;
+    someHue.red = 21;
+    someHue.green = 39;
+    someHue.blue = 6;
+
+    colorHue.push_back(someHue);
+    for (auto& i : colorHue) {
+        cout << i.red << '\n';
+        cout << i.green << '\n';
+        cout << i.blue << '\n';
+    }
 
     return 0;
 }
