@@ -12,7 +12,6 @@ struct Color {
 
 int main() {
     srand(time(0));
-
     const int MIN{25};
     const int MAX{50};
 
@@ -23,11 +22,15 @@ int main() {
     someHue.blue = 6;
 
     colorHue.push_back(someHue);
-    for (auto& i : colorHue) {
-        cout << i.red << '\n';
-        cout << i.green << '\n';
-        cout << i.blue << '\n';
-    }
+    // for (auto& i : colorHue) {
+    //     cout << i.red << '\n';
+    //     cout << i.green << '\n';
+    //     cout << i.blue << '\n';
+    // }
+
+    // Generate Random 25-50
+    int n = rand() % (MAX - MIN + 1) + MIN;
+    cout << n;
 
     return 0;
 }
