@@ -3,6 +3,7 @@
 #include <vector>
 #include <random>
 #include <ctime>
+#include <iomanip>
 
 using namespace std;
 
@@ -37,11 +38,16 @@ int main() {
         temp.blue = rand() % (RGB_MAX - RGB_MIN + 1) + RGB_MIN;
         colorHue.push_back(temp);
     }
-
-    cout << colorHue.at(0).green << '\n';
-    cout << colorHue.at(1).green;
+    printColors(colorHue);
 
     return 0;
 }
 
-void printColors(const Color& hueColor);
+void printColors(const Color& hueColor) {
+    const int COLOR_COL_WIDTH{5};
+    const int VALUE_COL_WIDTH{9};
+
+    cout << left
+         << setw(COLOR_COL_WIDTH) << "Color"
+         << setw(VALUE_COL_WIDTH) << "R value";
+}
