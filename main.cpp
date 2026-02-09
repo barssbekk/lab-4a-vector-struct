@@ -10,8 +10,9 @@ struct Color {
 };
 
 int main() {
-    Color test{};
-    test.blue = 51;
-    cout << test.blue;
+    vector<Color> colorHue{};
+    Color someHue{};
+    cout << someHue.red;
+
     return 0;
 }
