@@ -48,17 +48,20 @@ void printColors(const vector<Color>& colors) {
     const int VALUE_COL_WIDTH{9};
 
     cout << left
-         << setw(COLOR_COL_WIDTH) << "Color"
+         << setw(COLOR_COL_WIDTH) << "Color# "
          << setw(VALUE_COL_WIDTH) << "R value"
          << setw(VALUE_COL_WIDTH) << "G value"
          << setw(VALUE_COL_WIDTH) << "B value" << '\n';
 
     cout << left
-         << setw(COLOR_COL_WIDTH) << "--------";
+         << setw(COLOR_COL_WIDTH) << "----"
+         << setw(VALUE_COL_WIDTH) << "---"
+         << setw(VALUE_COL_WIDTH) << "---"
+         << setw(VALUE_COL_WIDTH) << "---" << '\n';
 
     for (size_t i{0}; i < colors.size(); ++i) {
         cout << left
-             << setw(COLOR_COL_WIDTH) << (i + 1)
+             << setw(COLOR_COL_WIDTH) << (i + 1) // output from 1 not 0
              << setw(VALUE_COL_WIDTH) << colors.at(i).red
              << setw(VALUE_COL_WIDTH) << colors.at(i).green
              << setw(VALUE_COL_WIDTH) << colors.at(i).blue << '\n';
