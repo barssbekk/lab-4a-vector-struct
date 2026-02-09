@@ -2,6 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <random>
+#include <ctime>
+
 using namespace std;
 
 struct Color {
@@ -21,16 +23,12 @@ int main() {
     someHue.green = 39;
     someHue.blue = 6;
 
-    colorHue.push_back(someHue);
-    // for (auto& i : colorHue) {
-    //     cout << i.red << '\n';
-    //     cout << i.green << '\n';
-    //     cout << i.blue << '\n';
-    // }
-
     // Generate Random 25-50
-    int n = rand() % (MAX - MIN + 1) + MIN;
+    int n {rand() % (MAX - MIN + 1) + MIN};
     cout << n;
+    for (int i = 0; i < n; ++i) {
+        Color temp{};
+    }
 
     return 0;
 }
