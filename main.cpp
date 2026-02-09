@@ -1,6 +1,7 @@
 // COMSC-210 | Lab 4A | Barsbek
 #include <iostream>
 #include <vector>
+#include <random>
 using namespace std;
 
 struct Color {
@@ -10,6 +11,10 @@ struct Color {
 };
 
 int main() {
+    srand(time(0));
+    for (int i = 0; i < 3; ++i)
+        cout << rand() << '\n';
+
     vector<Color> colorHue{};
     Color someHue{};
     someHue.red = 21;
