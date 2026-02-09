@@ -43,9 +43,11 @@ int main() {
     return 0;
 }
 
+// printColors() outputs a table
+// arguments: const vector<Color>& colors  = arrays of colors
 void printColors(const vector<Color>& colors) {
-    const int COLOR_COL_WIDTH{5};
-    const int VALUE_COL_WIDTH{9};
+    const int COLOR_COL_WIDTH{8};
+    const int VALUE_COL_WIDTH{11};
 
     cout << left
          << setw(COLOR_COL_WIDTH) << "Color# "
@@ -54,10 +56,10 @@ void printColors(const vector<Color>& colors) {
          << setw(VALUE_COL_WIDTH) << "B value" << '\n';
 
     cout << left
-         << setw(COLOR_COL_WIDTH) << "----"
-         << setw(VALUE_COL_WIDTH) << "---"
-         << setw(VALUE_COL_WIDTH) << "---"
-         << setw(VALUE_COL_WIDTH) << "---" << '\n';
+         << setw(COLOR_COL_WIDTH) << "-----"
+         << setw(VALUE_COL_WIDTH) << "-------"
+         << setw(VALUE_COL_WIDTH) << "-------"
+         << setw(VALUE_COL_WIDTH) << "-------" << '\n';
 
     for (size_t i{0}; i < colors.size(); ++i) {
         cout << left
