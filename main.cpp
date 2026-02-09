@@ -49,7 +49,9 @@ void printColors(const vector<Color>& colors) {
 
     cout << left
          << setw(COLOR_COL_WIDTH) << "Color"
-         << setw(VALUE_COL_WIDTH) << "R value";
+         << setw(VALUE_COL_WIDTH) << "R value"
+         << setw(VALUE_COL_WIDTH) << "G value"
+         << setw(VALUE_COL_WIDTH) << "B value" << '\n';
 
     for (size_t i{0}; i < colors.size(); ++i) {
         cout << left
