@@ -12,8 +12,9 @@ struct Color {
 
 int main() {
     srand(time(0));
-    for (int i = 0; i < 3; ++i)
-        cout << rand() << '\n';
+
+    const int MIN{25};
+    const int MAX{50};
 
     vector<Color> colorHue{};
     Color someHue{};
